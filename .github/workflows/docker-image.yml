@@ -1,10 +1,10 @@
-name: Docker Image CI
+name: Docker Image CI DEV
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "dev" ]
 
 jobs:
 
@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t flask-calculator cloudspace/
+      run: docker build -t flask-calculator-dev cloudspace/
