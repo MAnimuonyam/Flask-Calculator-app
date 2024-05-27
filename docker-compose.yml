@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  flask-calculator:
+    image: marcusb2006/flask-calculator-pipeline-dev:v1
+    ports:
+      - "8080:80"
