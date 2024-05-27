@@ -21,8 +21,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_PASSWORD }}
         
     - name: Build the Docker image
-      run: 
+      run: |
         docker build -t flask-calculator-pipeline-dev cloudspace/
-        docker tag flask-calculator-pipeline-dev marcusb2006/flask-calculator-pipeline-dev:dev
-        docker push marcusb2006/flask-calculator-pipeline-dev:dev
+        docker tag flask-calculator-pipeline-dev marcusb2006/flask-calculator-pipeline-dev:v1
+        docker push marcusb2006/flask-calculator-pipeline-dev:v1
       
