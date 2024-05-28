@@ -25,4 +25,20 @@ jobs:
         docker build -t flask-calculator-pipeline-dev cloudspace/
         docker tag flask-calculator-pipeline-dev marcusb2006/flask-calculator-pipeline-dev:v1
         docker push marcusb2006/flask-calculator-pipeline-dev:v1
+    - name: SCP Command to Transfer Files
+ 
+      uses: appleboy/scp-action@v0.1.7
+      with:
+      
+        host: ${{ secrets.HOST }}
+  
+        username: ${{ secrets.USERNAME }}
+    
+        key_path: ${{ secrets.KEY }}
+    
+        target: ./
+    
+        source: docker-compose.yml
+        
+          
       
